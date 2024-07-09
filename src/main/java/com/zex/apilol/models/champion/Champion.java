@@ -1,10 +1,12 @@
 package com.zex.apilol.models.champion;
 
+import com.zex.apilol.models.skill.Skill;
 import jakarta.persistence.*;
 import lombok.*;
 
 
 import java.time.LocalDate;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity(name = "champion")
@@ -53,5 +55,15 @@ public class Champion {
 
     @Column(name = "champ_image")
     private String image;
+
+    @OneToMany(mappedBy = "champion", cascade = CascadeType.ALL)
+    private Set<Skill> skills;
+
+
+    public void setSkills(Set<Skill> skills) {
+        skills.forEach(s ->
+                s.setChampion(this));
+        this.skills = skills;
+    }
 
 }
