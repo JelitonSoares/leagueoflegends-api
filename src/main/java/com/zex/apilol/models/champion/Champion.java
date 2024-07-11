@@ -1,5 +1,6 @@
 package com.zex.apilol.models.champion;
 
+import com.zex.apilol.dtos.ChampionDTO;
 import com.zex.apilol.models.skill.Skill;
 import jakarta.persistence.*;
 import lombok.*;
@@ -58,6 +59,17 @@ public class Champion {
 
     @OneToMany(mappedBy = "champion", cascade = CascadeType.ALL)
     private Set<Skill> skills;
+
+    public Champion(ChampionDTO data) {
+        this.shortName = data.shortName();
+        this.longName = data.longName();
+        this.lore = data.lore();
+        this.role = data.role();
+        this.difficulty = data.difficulty();
+        this.lane = data.lane();
+        this.release = data.release();
+        this.image = data.image();
+    }
 
 
     public void setSkills(Set<Skill> skills) {

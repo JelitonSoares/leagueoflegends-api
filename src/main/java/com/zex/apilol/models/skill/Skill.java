@@ -1,5 +1,6 @@
 package com.zex.apilol.models.skill;
 
+import com.zex.apilol.dtos.SkillDTO;
 import com.zex.apilol.models.champion.Champion;
 import jakarta.persistence.*;
 import lombok.*;
@@ -42,5 +43,13 @@ public class Skill {
     @ManyToOne
     @JoinColumn(name = "champion_id")
     private Champion champion;
+
+    public Skill(SkillDTO data) {
+        this.name = data.name();
+        this.description = data.description();
+        this.type = data.type();
+        this.image = data.image();
+        this.video = data.video();
+    }
 
 }
