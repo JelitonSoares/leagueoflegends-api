@@ -18,8 +18,8 @@ public class ChampionController {
     private ChampionService service;
 
     @PostMapping
-    public ResponseEntity<Champion> saveChampion(@RequestBody @Valid ChampionDTO data) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(data));
+    public void saveChampion(@RequestBody @Valid ChampionDTO data) {
+        this.service.save(data);
     }
 
     @GetMapping
