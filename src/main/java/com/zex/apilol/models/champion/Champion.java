@@ -7,6 +7,7 @@ import lombok.*;
 
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -58,7 +59,7 @@ public class Champion {
     private String image;
 
     @OneToMany(mappedBy = "champion", cascade = CascadeType.ALL)
-    private Set<Skill> skills;
+    private List<Skill> skills;
 
     public Champion(ChampionDTO data) {
         this.shortName = data.shortName();
@@ -72,7 +73,7 @@ public class Champion {
     }
 
 
-    public void setSkills(Set<Skill> skills) {
+    public void setSkills(List<Skill> skills) {
         skills.forEach(s ->
                 s.setChampion(this));
         this.skills = skills;
