@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/apilol/champions")
 public class ChampionController {
@@ -18,5 +20,10 @@ public class ChampionController {
     @PostMapping
     public ResponseEntity<Champion> saveChampion(@RequestBody @Valid ChampionDTO data) {
         return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(data));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Champion>> getAllChampion() {
+        return ResponseEntity.status(HttpStatus.OK).body(this.service.getAllChampions());
     }
 }
