@@ -18,15 +18,15 @@ public class ChampionService {
     private ChampionRepository repository;
 
     @Transactional
-    public Champion save(ChampionDTO data) {
-        Set<Skill> skills = data.skills().stream()
+    public void save(ChampionDTO data) {
+        List<Skill> skills = data.skills().stream()
                 .map(Skill::new)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toList());
 
         Champion champion = new Champion(data);
         champion.setSkills(skills);
 
-        return this.repository.save(champion);
+        this.repository.save(champion);
     }
 
 
