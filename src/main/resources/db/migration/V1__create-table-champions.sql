@@ -1,5 +1,5 @@
 CREATE TABLE champions (
-id CHAR(36) DEFAULT (UUID()),
+id BINARY(16) NOT NULL ,
 champ_short_name VARCHAR(255) NOT NULL,
 champ_long_name VARCHAR(255) NOT NULL,
 champ_lore VARCHAR(255) NOT NULL,
