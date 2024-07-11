@@ -1,5 +1,6 @@
 package com.zex.apilol.dtos;
 
+import com.zex.apilol.models.champion.Champion;
 import com.zex.apilol.models.champion.Difficulty;
 import com.zex.apilol.models.champion.Lane;
 import com.zex.apilol.models.champion.Role;
@@ -10,8 +11,9 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
-public record ChampionDTO(
+public record ChampionDTO(UUID id,
                           @NotBlank
                           String shortName,
                           @NotBlank
@@ -31,4 +33,13 @@ public record ChampionDTO(
                           @NotNull
                           @Valid
                           Set<SkillDTO> skills) {
+
+    public ChampionDTO(Champion champion) {
+        this(champion.getId(), champion.getShortName(), champion.getLongName(), champion.getLore(), champion.getRole(), champion.getDifficulty(),
+                champion.getLane(), champion.getRelease(), champion.getImage(), champion.getSkills().stream()
+                        .map(s -> new SkillDTO(s))
+                        .collect(Collectors.toSet()));
+
+    }
+
 }

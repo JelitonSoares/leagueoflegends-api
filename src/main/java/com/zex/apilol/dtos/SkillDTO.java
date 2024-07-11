@@ -1,5 +1,6 @@
 package com.zex.apilol.dtos;
 
+import com.zex.apilol.models.skill.Skill;
 import com.zex.apilol.models.skill.SkillType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,4 +14,9 @@ public record SkillDTO(@NotBlank String name,
                        String image,
                        @NotBlank
                        String video) {
+
+
+    public SkillDTO(Skill skill) {
+        this(skill.getName(), skill.getDescription(), skill.getType(), skill.getName(), skill.getName());
+    }
 }
