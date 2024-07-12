@@ -23,7 +23,7 @@ public class ChampionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Champion>> getAllChampion() {
+    public ResponseEntity<List<ChampionDTO>> getAllChampion() {
         return ResponseEntity.status(HttpStatus.OK).body(this.service.getAllChampions());
     }
 }
