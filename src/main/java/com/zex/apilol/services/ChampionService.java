@@ -47,4 +47,12 @@ public class ChampionService {
 
         this.repository.delete(champion);
     }
+
+    public ChampionDTO update(ChampionDTO data) {
+        Champion champion = this.repository.getReferenceById(data.id());
+
+        champion.updateChampion(data);
+
+        return new ChampionDTO(this.repository.save(champion));
+    }
 }
