@@ -79,4 +79,39 @@ public class Champion {
         this.skills = skills;
     }
 
+    public void updateChampion(ChampionDTO data) {
+        if (data.shortName() != null) {
+            this.shortName = data.shortName();
+        }
+
+        if (data.longName() != null) {
+            this.longName = data.longName();
+        }
+
+        if (data.lore() != null) {
+            this.lore = data.lore();
+        }
+
+        if (data.role() != null) {
+            this.role  = data.role();
+        }
+
+        if (data.difficulty() != null) {
+            this.difficulty = data.difficulty();
+        }
+
+        if (data.lane() != null) {
+            this.lane = data.lane();
+        }
+
+        if (data.release() != null) {
+            this.release = data.release();
+        }
+
+        if (data.image() != null) {
+            this.image = data.image();
+        }
+
+    }
+
 }
