@@ -32,4 +32,11 @@ public class ChampionController {
     public void deleteChampion(@PathVariable UUID id) {
         this.service.delete(id);
     }
+
+    @PutMapping
+    public ResponseEntity<ChampionDTO> updateChampion(@RequestBody ChampionDTO data) {
+        return ResponseEntity.status(HttpStatus.OK).body(this.service.update(data));
+    }
+
+
 }
