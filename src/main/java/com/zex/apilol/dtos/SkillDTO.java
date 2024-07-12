@@ -17,6 +17,6 @@ public record SkillDTO(@NotBlank String name,
 
 
     public SkillDTO(Skill skill) {
-        this(skill.getName(), skill.getDescription(), skill.getType(), skill.getName(), skill.getName());
+        this(skill.getName(), skill.getDescription(), skill.getType(), skill.getImage(), skill.getVideo());
     }
 }
