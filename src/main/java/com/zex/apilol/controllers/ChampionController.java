@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/apilol/champions")
@@ -25,5 +26,10 @@ public class ChampionController {
     @GetMapping
     public ResponseEntity<List<ChampionDTO>> getAllChampion() {
         return ResponseEntity.status(HttpStatus.OK).body(this.service.getAllChampions());
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteChampion(@PathVariable UUID id) {
+        this.service.delete(id);
     }
 }
