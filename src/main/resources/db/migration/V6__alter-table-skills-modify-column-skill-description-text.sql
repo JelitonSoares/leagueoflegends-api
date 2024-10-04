@@ -1,0 +1,1 @@
+ALTER TABLE skills MODIFY COLUMN skill_description TEXT NOT NULL;
