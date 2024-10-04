@@ -1,0 +1,1 @@
+ALTER TABLE champions MODIFY COLUMN champ_lore TEXT NOT NULL;
