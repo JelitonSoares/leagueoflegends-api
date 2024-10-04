@@ -1,14 +1,12 @@
-package com.zex.apilol.models.champion;
+package com.zex.apilol.domain.champion;
 
-import com.zex.apilol.dtos.ChampionDTO;
-import com.zex.apilol.models.skill.Skill;
+import com.zex.apilol.domain.skill.Skill;
 import jakarta.persistence.*;
 import lombok.*;
 
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity(name = "champion")

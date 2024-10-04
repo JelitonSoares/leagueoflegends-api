@@ -1,7 +1,5 @@
-package com.zex.apilol.dtos;
+package com.zex.apilol.domain.skill;
 
-import com.zex.apilol.models.skill.Skill;
-import com.zex.apilol.models.skill.SkillType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 

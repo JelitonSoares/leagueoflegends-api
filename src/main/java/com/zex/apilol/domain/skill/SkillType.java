@@ -1,4 +1,4 @@
-package com.zex.apilol.models.skill;
+package com.zex.apilol.domain.skill;
 
 public enum SkillType {
     PASSIVA,

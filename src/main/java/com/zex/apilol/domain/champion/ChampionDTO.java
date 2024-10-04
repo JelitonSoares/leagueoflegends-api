@@ -1,9 +1,6 @@
-package com.zex.apilol.dtos;
+package com.zex.apilol.domain.champion;
 
-import com.zex.apilol.models.champion.Champion;
-import com.zex.apilol.models.champion.Difficulty;
-import com.zex.apilol.models.champion.Lane;
-import com.zex.apilol.models.champion.Role;
+import com.zex.apilol.domain.skill.SkillDTO;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,7 +1,6 @@
-package com.zex.apilol.models.skill;
+package com.zex.apilol.domain.skill;
 
-import com.zex.apilol.dtos.SkillDTO;
-import com.zex.apilol.models.champion.Champion;
+import com.zex.apilol.domain.champion.Champion;
 import jakarta.persistence.*;
 import lombok.*;
 

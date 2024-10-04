@@ -1,4 +1,4 @@
-package com.zex.apilol.models.champion;
+package com.zex.apilol.domain.champion;
 
 public enum Difficulty {
     BAIXA,

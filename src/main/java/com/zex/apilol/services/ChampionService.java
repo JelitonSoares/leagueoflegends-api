@@ -1,15 +1,14 @@
 package com.zex.apilol.services;
 
-import com.zex.apilol.dtos.ChampionDTO;
-import com.zex.apilol.models.champion.Champion;
-import com.zex.apilol.models.skill.Skill;
+import com.zex.apilol.domain.champion.ChampionDTO;
+import com.zex.apilol.domain.champion.Champion;
+import com.zex.apilol.domain.skill.Skill;
 import com.zex.apilol.repositories.ChampionRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 

@@ -1,7 +1,6 @@
 package com.zex.apilol.controllers;
 
-import com.zex.apilol.dtos.ChampionDTO;
-import com.zex.apilol.models.champion.Champion;
+import com.zex.apilol.domain.champion.ChampionDTO;
 import com.zex.apilol.services.ChampionService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
