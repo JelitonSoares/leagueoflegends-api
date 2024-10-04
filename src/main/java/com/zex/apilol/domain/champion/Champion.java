@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
-@Entity(name = "champion")
+@Entity(name = "Champion")
 @Table(name = "champions")
 @Getter
 @Setter
