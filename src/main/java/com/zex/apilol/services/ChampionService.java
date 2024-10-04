@@ -32,7 +32,7 @@ public class ChampionService {
 
     public List<ChampionDTO> getAllChampions() {
 
-        List<ChampionDTO> champions = this.repository.findAll().stream()
+        List<ChampionDTO> champions = this.repository.findAllOrderByShortName().stream()
                 .map(c -> new ChampionDTO(c))
                 .collect(Collectors.toList());
 
